@@ -1,0 +1,9 @@
+apiVersion: networking.burban.me/v1
+kind: IngressHandling
+metadata:
+  labels:
+    app.kubernetes.io/name: kubevoyage-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: ingresshandling-sample
+spec:
+  # TODO(user): Add fields here

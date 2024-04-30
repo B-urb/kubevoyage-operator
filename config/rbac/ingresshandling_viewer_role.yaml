@@ -1,0 +1,23 @@
+# permissions for end users to view ingresshandlings.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: kubevoyage-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: ingresshandling-viewer-role
+rules:
+- apiGroups:
+  - networking.burban.me
+  resources:
+  - ingresshandlings
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - networking.burban.me
+  resources:
+  - ingresshandlings/status
+  verbs:
+  - get

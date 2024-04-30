@@ -1,0 +1,27 @@
+# permissions for end users to edit ingresshandlings.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: kubevoyage-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: ingresshandling-editor-role
+rules:
+- apiGroups:
+  - networking.burban.me
+  resources:
+  - ingresshandlings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - networking.burban.me
+  resources:
+  - ingresshandlings/status
+  verbs:
+  - get
