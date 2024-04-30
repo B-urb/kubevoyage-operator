@@ -1,8 +1,10 @@
 # kubevoyage-operator
-// TODO(user): Add simple overview of use/purpose
-
+Used for the [kubevoyage](https://github.com/B-urb/kubevoyage) project to automatically generate the necessary traefik forward-auth middlewares.
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+
+Reconciles ingresses if they have an annotation 
+`kubevoyage-auth=true`
+and add traefik auth middleware into the cluster to enable forward auth in a simple manner.
 
 ## Getting Started
 

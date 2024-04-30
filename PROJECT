@@ -17,4 +17,8 @@ resources:
   kind: IngressHandling
   path: B-urb/kubevoyage-operator/api/v1
   version: v1
+- domain: burban.me
+  group: traefik
+  kind: Middleware
+  version: v1alpha1
 version: "3"
